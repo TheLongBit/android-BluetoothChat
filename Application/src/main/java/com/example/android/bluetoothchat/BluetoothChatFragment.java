@@ -170,6 +170,7 @@ public class BluetoothChatFragment extends Fragment {
         // Initialize the send button with a listener that for click events
         mSendButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+
                 // Send a message using content of the edit text widget
                 View view = getView();
                 if (null != view) {
@@ -179,13 +180,15 @@ public class BluetoothChatFragment extends Fragment {
                 }
             }
         });
-
-        // Initialize the BluetoothChatService to perform bluetooth connections
         mChatService = new BluetoothChatService(getActivity(), mHandler);
+                    // Initialize the BluetoothChatService to perform bluetooth connections
+                    mChatService = new BluetoothChatService(getActivity(), mHandler);
 
-        // Initialize the buffer for outgoing messages
-        mOutStringBuffer = new StringBuffer("");
-    }
+                    // Initialize the buffer for outgoing messages
+                    mOutStringBuffer = new StringBuffer("");
+                }
+
+
 
     /**
      * Makes this device discoverable.
